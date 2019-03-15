@@ -1,13 +1,14 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
-import App from './views/App'
-import Hello from './views/Hello'
-import Home from './views/Home'
+import App from './views/App';
+import Hello from './views/Hello';
+import Home from './views/Home';
 
 import UsersIndex from './views/UsersIndex';
+import UsersEdit from './views/UsersEdit';
 
 const router = new VueRouter({
     mode: 'history',
@@ -27,11 +28,16 @@ const router = new VueRouter({
             name: 'users.index',
             component: UsersIndex,
         },
+        {
+            path: '/users/:id/edit',
+            name: 'users.edit',
+            component: UsersEdit,
+        },
     ],
 });
 
 const app = new Vue({
     el: '#app',
-    components: { App },
+    components: {App},
     router,
 });

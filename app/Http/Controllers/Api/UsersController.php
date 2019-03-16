@@ -30,4 +30,10 @@ class UsersController extends Controller
 
         return new UserResource($user);
     }
+
+    public function destroy(User $user)
+    {
+        $user->delete();
+        return response(null, 204);
+    }
 }

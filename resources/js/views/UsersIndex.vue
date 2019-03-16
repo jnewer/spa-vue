@@ -9,6 +9,7 @@
                 <strong>Name:</strong> {{ name }},
                 <strong>Email:</strong> {{ email }} |
                 <router-link :to="{ name: 'users.edit', params: { id } }">Edit</router-link>
+
             </li>
         </ul>
 
@@ -113,6 +114,7 @@
                     this.meta = meta;
                 }
             },
+
         }
     }
 </script>
